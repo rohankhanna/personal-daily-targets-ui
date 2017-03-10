@@ -7,4 +7,6 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'app works!';
+  timerTimes: number[] = [10,20,30,40];
+  PUs: number[];
 }

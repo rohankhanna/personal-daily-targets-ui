@@ -1,3 +1,9 @@
 <h1>
   {{title}}
 </h1>
+<div *ngFor="let PU of PUs">
+  <h1>{{PU}}</h1>
+</div>
+<div *ngFor="let timerTime of timerTimes">
+  <timer [config]="{ direction: 'down', duration: timerTime , precision : 'seconds'}"></timer>
+</div>
