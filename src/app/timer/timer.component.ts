@@ -7,6 +7,7 @@ declare var Timer:any;
 })
 export class TimerComponent implements OnInit {
   timer : any;
+  timeVal : any;
   @Input() config:any;
   constructor(private elementRef: ElementRef) {
   }
@@ -14,6 +15,8 @@ export class TimerComponent implements OnInit {
   ngOnInit() {
     // debugger;
     this.timer = new Timer();
+    this.timer.start(this.configureTimer());
+    this.timer.pause();
     this.elementRef.nativeElement.childNodes[0].childNodes[3].childNodes[1].addEventListener('click', () => {
         this.timer.start(this.configureTimer());
         // this.timer.start({ countdown: true, startValues: {seconds: this.config.duration}});
